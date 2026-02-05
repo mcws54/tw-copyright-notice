@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TW游戏版权声明 - Copyright Notice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+            border-bottom: 5px solid #ff9800;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        
+        .language-selector {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .lang-btn {
+            background-color: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            margin: 0 10px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        .lang-btn.active {
+            background-color: #ff9800;
+            color: #1a237e;
+            font-weight: 600;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .language-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .language-section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .section-title {
+            color: #1a237e;
+            border-bottom: 2px solid #ff9800;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 12px;
+            font-size: 1.5rem;
+        }
+        
+        .declaration-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #e0e0e0;
+            transition: border-color 0.3s;
+        }
+        
+        .declaration-item:hover {
+            border-left-color: #283593;
+        }
+        
+        .item-number {
+            display: inline-block;
+            background-color: #283593;
+            color: white;
+            width: 28px;
+            height: 28px;
+            text-align: center;
+            line-height: 28px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            color: #1a237e;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .item-content {
+            color: #555;
+            text-align: justify;
+        }
+        
+        .contact-info {
+            background-color: #f0f4ff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-left: 5px solid #283593;
+        }
+        
+        .contact-title {
+            color: #1a237e;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-title i {
+            margin-right: 10px;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .contact-item i {
+            color: #283593;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+            font-size: 0.95rem;
+            border-top: 1px solid #eee;
+            margin-top: 30px;
+        }
+        
+        .warning-box {
+            background-color: #fff8e1;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning-box p {
+            color: #5d4037;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .warning-box i {
+            margin-right: 10px;
+            color: #ff9800;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 25px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header h2 {
+                font-size: 1.3rem;
+            }
+            
+            .content {
+                padding: 25px 20px;
+            }
+            
+            .contact-details {
+                flex-direction: column;
+            }
+            
+            .contact-item {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-copyright"></i> TW游戏版权声明</h1>
+            <h2>TWGames Copyright Notice</h2>
+            <div class="language-selector">
+                <button class="lang-btn active" onclick="switchLanguage('chinese')">
+                    <i class="fas fa-language"></i> 中文版本
+                </button>
+                <button class="lang-btn" onclick="switchLanguage('english')">
+                    <i class="fas fa-language"></i> English Version
+                </button>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div id="chinese-section" class="language-section active">
+                <h2 class="section-title"><i class="fas fa-gavel"></i> 中文版权声明</h2>
+                
+                <div class="declaration-item">
+                    <div class="item-title"><span class="item-number">1</span> 版权保护范围</div>
+                    <div class="item-content">
+                        任何单位或个人在互联网或其他媒体上转载、传播、摘录、修改、改编或使用TW游戏出版物包括但不限于图文、网站布局、网页设计等受版权保护的内容，均属侵犯TW游戏著作权的行为。
+                    </div>
+                </div>
+                
+                <div class="declaration-item">
+                    <div class="item-title"><span class="item-number">2</span> 侵权处理</div>
+                    <div class="item-content">
+                        侵权单位或个人未立即删除侵权作品或未及时联系TW游戏达成版权理解与合作，TW游戏将依法公示或通过其他法律手段直接保护。
+                    </div>
+                </div>
+                
+                <div class="declaration-item">
+                    <div class="item-title"><span class="item-number">3</span> 版权合作</div>
+                    <div class="item-content">
+                        自声明之日起，TW代表TW游戏对外开展版权保护工作。所有涉嫌侵权的单位和个人，有必要及时与TW讨论版权理解与合作（咨询电话：暂不提供 电子邮件：twgamesow@163.com  TWwsgames@outlook.com 地址：TW 联系人：WS）。
+                    </div>
+                </div>
+                
+                <div class="declaration-item">
+                    <div class="item-title"><span class="item-number">4</span> 声明解释权</div>
+                    <div class="item-content">
+                        这一声明由TW游戏完全解释。
+                    </div>
+                </div>
+                
+                <div class="declaration-item">
+                    <div class="item-title"><span class="item-number">5</span> 使用条款</div>
+                    <div class="item-content">
+                        通过访问、浏览或使用TW游戏，您已阅读、理解并同意受以下条款的约束，并遵守所有适用的法律法规，如果您不同意上述任何条款，请停止使用TW游戏。
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-title"><i class="fas fa-address-card"></i> 版权合作联系方式</div>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <div style="font-weight:600;">电子邮箱</div>
+                                <div>twgamesow@163.com</div>
+                                <div>TWwsgames@outlook.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <div style="font-weight:600;">地址</div>
+                                <div>TW</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <div style="font-weight:600;">联系人</div>
+                                <div>WS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="warning-box">
+                    <p><i class="fas fa-exclamation-triangle"></i> 请注意：任何未经授权使用TW游戏受版权保护内容的行为都可能构成侵权，将面临法律追责。</p>
+                </div>
+            </div>
+            
+            <div id="english-section" class="language-section">
+                <h2 class="section-title"><i class="fas fa-gavel"></i> English Copyright Notice</h2>
+                
+                <div class="declaration-item">
+                    <div class="item-title"><span class="item-number">1</span> Scope of Copyright Protection</div>
+                    <div class="item-content">
+                        Any unit or individual who reprints, disseminates, extracts, modifies, adapts or uses on the Internet or other media TWGames Publications include but are not limited to Image&Text, Website layout, web design and other copyrighted content are all infringed TWGames The act of copyright.
+                    </div>
+                </div>
+                
+                <div class="declaration-item">
+                    <div class="item-title"><span class="item-number">2</span> Infringement Handling</div>
+                    <div class="item-content">
+                        The infringing unit or individual did not immediately delete the infringing work or did not promptly contact TWGames Reached copyright understanding and cooperation, TWGames They will be publicized according to law or directly protected by other legal means.
+                    </div>
+                </div>
+                
+                <div class="declaration-item">
+                    <div class="item-title"><span class="item-number">3</span> Copyright Cooperation</div>
+                    <div class="item-content">
+                        Since the date of the declaration, TW represents TWGames to carry out the work of copyright protection externally. All units and individuals suspected of infringement, It is necessary to discuss copyright understanding and cooperation with TW in a timely manner (consultation email: twgamesow@163.com address: TW contact: WS).
+                    </div>
+                </div>
+                
+                <div class="declaration-item">
+                    <div class="item-title"><span class="item-number">4</span> Interpretation Right</div>
+                    <div class="item-content">
+                        This statement is fully interpreted by TWGames.
+                    </div>
+                </div>
+                
+                <div class="declaration-item">
+                    <div class="item-title"><span class="item-number">5</span> Terms of Use</div>
+                    <div class="item-content">
+                        By visiting, browsing or using TWGames, you have read, understood and agreed to be bound by the following terms and comply with all applicable laws and regulations. If you do not agree with any of the above terms, please stop using TWGames.
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-title"><i class="fas fa-address-card"></i> Copyright Cooperation Contact</div>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <div style="font-weight:600;">Email</div>
+                                <div>twgamesow@163.com</div>
+                                <div>TWwsgames@outlook.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <div style="font-weight:600;">Address</div>
+                                <div>TW</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <div style="font-weight:600;">Contact Person</div>
+                                <div>WS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="warning-box">
+                    <p><i class="fas fa-exclamation-triangle"></i> Notice: Any unauthorized use of TWGames copyrighted content may constitute infringement and will face legal consequences.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© TW游戏版权所有 | © TWGames All Rights Reserved</p>
+            <p>本声明最终解释权归TW游戏所有 | This statement is fully interpreted by TWGames</p>
+            <p style="margin-top: 10px; font-size: 0.85rem; color: #888;">
+                <i class="fas fa-shield-alt"></i> 依据《中华人民共和国著作权法》、《信息网络传播权保护条例》及相关法规制定
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(language) {
+            // 切换语言部分显示
+            document.getElementById('chinese-section').classList.remove('active');
+            document.getElementById('english-section').classList.remove('active');
+            document.getElementById(language + '-section').classList.add('active');
+            
+            // 更新按钮状态
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            if (language === 'chinese') {
+                document.querySelectorAll('.lang-btn')[0].classList.add('active');
+            } else {
+                document.querySelectorAll('.lang-btn')[1].classList.add('active');
+            }
+        }
+        
+        // 初始加载时确保中文版本激活
+        window.addEventListener('DOMContentLoaded', (event) => {
+            switchLanguage('chinese');
+        });
+    </script>
+</body>
+</html>
